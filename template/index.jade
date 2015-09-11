@@ -51,7 +51,7 @@ html
 
         .span9
           if locals.readme
-            section(id=name) !{readme}
+            section.readme(id=name) !{readme}
           each symbol in dox
             if symbol.ctx.name
               section(id=symbol.ctx.name)
@@ -64,10 +64,12 @@ html
                     p
                       mixin labelForSymbolType(symbol)
                       if symbol.ctx.string
+                        span &nbsp;
                         span=  symbol.ctx.string
                         span &nbsp;
                       if symbol.ctx.extends
-                        span.label.label-default extends 
+                        span &nbsp;
+                        span.label.label-default extends
                         span &nbsp;
                         span=  symbol.ctx.extends
                       if symbol.return
