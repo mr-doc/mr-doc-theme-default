@@ -33,14 +33,14 @@ html
         .span3.bs-docs-sidebar
           ul.nav.nav-list.bs-docs-sidenav.affix-top
             each file in files
-              li(class=(file.name !== currentName ? "":"active"))
-                a(href=file.relName) #{file.name}
+              li(class=(file.name !== current.name ? "":"active"))
+                a(href=file.relative.name) #{file.name}
 
           .scrollspy
             ul.nav.nav-list.bs-docs-sidenav.affix-top
               each symbol in symbols
                 li
-                  if name === currentName
+                  if name === current.name
                     a(href='#'+symbol.name)
                       mixin iForSymbolType(symbol)
                       span #{symbol.name}
