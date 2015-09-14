@@ -9,11 +9,17 @@ html
   head
     meta(name='viewport', content='width=device-width', charset='utf-8')
     title= project.title
-    link(rel="stylesheet", href="css/bootstrap.min.css")
-    link(rel="stylesheet", href="css/bootstrap-responsive.min.css")
-    link(rel="stylesheet", href="css/docs.min.css")
-    link(rel="stylesheet", href="css/index.min.css")
-    link(rel="stylesheet", href="css/prism.min.css")
+    each file in files
+      each target in targets
+        if file.name === target.file.name
+          if file.name === current.name
+            link(rel='stylesheet', href=target.relative.path + "css/bootstrap.min.css")
+            link(rel='stylesheet', href=target.relative.path + "css/cayman.min.css")
+            link(rel='stylesheet', href=target.relative.path + "css/prism.min.css")
+            link(rel='stylesheet', href=target.relative.path + "css/index.min.css")
+            link(rel='stylesheet', href=target.relative.path + "css/docs.min.css")
+            link(rel="stylesheet", href=target.relative.path + "css/bootstrap-responsive.min.css")
+
   body(data-spy="scroll", data-target=".scrollspy")
     div.navbar.navbar-inverse.navbar-fixed-top
       div.navbar-inner
@@ -33,21 +39,25 @@ html
         .span3.bs-docs-sidebar
           ul.nav.nav-list.bs-docs-sidenav.affix-top
             each file in files
-              li(class=(file.name !== current.name ? "":"active"))
-                a(href=file.relative.name) #{file.name}
+              each target in targets
+                if file.name === target.file.name
+                  li(class=(file.name !== current.name ? "":"active"))
+                    a(href=target.relative.path + file.relative.name) #{file.name}
 
           .scrollspy
-            ul.nav.nav-list.bs-docs-sidenav.affix-top
-              each symbol in symbols
-                li
-                  if name === current.name
-                    a(href='#'+symbol.name)
-                      mixin iForSymbolType(symbol)
-                      span #{symbol.name}
-                  else
-                    a(href=symbol.targetFile+'#'+symbol.name)
-                      mixin iForSymbolType(symbol)
-                      span #{symbol.name}
+            each file in files
+              if file.name === current.name
+                ul.nav.nav-list.bs-docs-sidenav.affix-top
+                  each symbol in symbols
+                    li
+                      if name === current.name
+                        a(href='#'+symbol.name)
+                          mixin iForSymbolType(symbol)
+                          span #{symbol.name}
+                      else
+                        a(href=symbol.targetFile+'#'+symbol.name)
+                          mixin iForSymbolType(symbol)
+                          span #{symbol.name}
 
         .span9
           if locals.readme
@@ -116,13 +126,16 @@ html
           |  and 
           a.redsmin(href='https://redsmin.com/?btt', title="Full Redis GUI") Redsmin
         p Theme borrowed from Twitter Bootstrap
-
-    script(src="js/twitter-widget.min.js")
-    script(src="js/jquery.min.js")
-    script(src="js/bootstrap-transition.min.js")
-    script(src="js/bootstrap-scrollspy.min.js")
-    script(src="js/bootstrap-dropdown.min.js")
-    script(src="js/bootstrap-collapse.min.js")
-    script(src="js/bootstrap-affix.min.js")
-    script(src="js/prism.min.js")
-    script(src="js/index.min.js")
+    each file in files
+      each target in targets
+        if file.name === target.file.name
+          if file.name === current.name
+            script(src=target.relative.path + "js/twitter-widget.min.js")
+            script(src=target.relative.path + "js/jquery.min.js")
+            script(src=target.relative.path + "js/bootstrap-transition.min.js")
+            script(src=target.relative.path + "js/bootstrap-scrollspy.min.js")
+            script(src=target.relative.path + "js/bootstrap-dropdown.min.js")
+            script(src=target.relative.path + "js/bootstrap-collapse.min.js")
+            script(src=target.relative.path + "js/bootstrap-affix.min.js")
+            script(src=target.relative.path + "js/prism.min.js")
+            script(src=target.relative.path + "js/index.min.js")
