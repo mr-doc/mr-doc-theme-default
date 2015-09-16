@@ -26,9 +26,17 @@
     "url": "git+https://github.com/iwatakeshi/doxx-theme-default.git"
   },
   "author": "iwatakeshi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iwatakeshi/doxx-theme-default/issues"
   },
-  "homepage": "https://github.com/iwatakeshi/doxx-theme-default#readme"
+  "homepage": "https://github.com/iwatakeshi/doxx-theme-default#readme",
+  "keywords": [
+    "doxx",
+    "jsdoc",
+    "theme",
+    "default",
+    "documentation",
+    "javascript"
+  ]
 }
