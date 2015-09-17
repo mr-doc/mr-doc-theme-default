@@ -1,7 +1,6 @@
 {
-  "name": "doxx-theme-default",
+  "name": "mr-doc-theme-default",
   "version": "1.0.0",
-  "private": true,
   "description": "The default theme for Doxx.",
   "main": "gulpfile.js",
   "directories": {
@@ -18,22 +17,23 @@
     "gulp-shell": "^0.4.3",
     "lodash": "^3.10.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iwatakeshi/doxx-theme-default.git"
+    "url": "git+https://github.com/mr-doc/mr-doc-theme-default.git"
   },
-  "author": "iwatakeshi",
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com)",
+  "contributors": [{
+    "name": "iwatakeshi"
+  }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iwatakeshi/doxx-theme-default/issues"
+    "url": "https://github.com/mr-doc/mr-doc-theme-default/issues"
   },
-  "homepage": "https://github.com/iwatakeshi/doxx-theme-default#readme",
+  "homepage": "https://github.com/mr-doc/mr-doc-theme-default#readme",
   "keywords": [
-    "doxx",
     "jsdoc",
+    "doxx",
+    "mr-doc",
     "theme",
     "default",
     "documentation",
