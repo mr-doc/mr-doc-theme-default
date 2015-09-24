@@ -1,6 +1,6 @@
 {
   "name": "mr-doc-theme-default",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The default theme for Doxx.",
   "main": "gulpfile.js",
   "directories": {
@@ -22,9 +22,11 @@
     "url": "git+https://github.com/mr-doc/mr-doc-theme-default.git"
   },
   "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com)",
-  "contributors": [{
-    "name": "iwatakeshi"
-  }],
+  "contributors": [
+    {
+      "name": "iwatakeshi"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mr-doc/mr-doc-theme-default/issues"
