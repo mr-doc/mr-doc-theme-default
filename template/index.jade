@@ -42,7 +42,7 @@ html
               each target in targets
                 if file.name === target.file.name
                   li(class=(file.name !== current.name ? "":"active"))
-                    a(href=target.relative.path + file.relative.name) #{file.name}
+                    a(href=target.path) #{file.name}
 
           .scrollspy
             each file in files
