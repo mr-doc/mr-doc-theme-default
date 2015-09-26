@@ -1,2 +1,2 @@
-# doxx-theme-default
-The default theme for Doxx.
+# Mr. Doc's Default Theme
+The default theme for Mr. Doc.

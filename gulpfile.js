@@ -29,18 +29,21 @@ _.extend(assets, {
 });
 
 // Doxx commands
-var cmd = { source:' --source ', target:' --target ', template: ' --template ' };
+var cmd = { source:' -s ', output:' -o ', template: ' -j ', kit:' -k ', name: ' -n '};
 
 // Doxx commands with path
-var source = cmd.source +  join(cwd, test.src.path);
-var target = cmd.target + join(cwd, test.docs.path);
-var template = cmd.template + join(cwd, 'template/index.jade');
+var source = cmd.source +  join(cwd, test.src.path),
+    output = cmd.output + join(cwd, test.docs.path),
+    template = cmd.template + join(cwd, 'template/index.jade'),
+    kit = cmd.kit,
+    name = cmd.name + '"Mr. Doc\'s Default Theme"';
+cmd = source + output + template + kit + name;
 
 /** ---------------------- Tasks ---------------------- */
 
 // Task 1: Build the docs
 gulp.task('docs',shell.task([
-    './node_modules/doxx/bin/doxx ' + source + target + template
+    './node_modules/mr-doc/bin/mr-doc ' + cmd
 ]));
 
 

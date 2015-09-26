@@ -7,8 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "doxx": "^2.0.0",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "mr-doc": "git+https://github.com/mr-doc/mr-doc.git"
   },
   "devDependencies": {
     "glob": "^5.0.14",
