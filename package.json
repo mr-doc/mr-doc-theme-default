@@ -33,12 +33,6 @@
   },
   "homepage": "https://github.com/mr-doc/mr-doc-theme-default#readme",
   "keywords": [
-    "jsdoc",
-    "doxx",
-    "mr-doc",
-    "theme",
-    "default",
-    "documentation",
-    "javascript"
+    "mr-doc-theme",
   ]
 }
