@@ -37,51 +37,57 @@
           </ul>
           <div class="scrollspy">
             <ul class="nav nav-list bs-docs-sidenav affix-top">
-              <li><a href="#Doxx"><i class="alert alert-success"></i><span>Doxx</span></a>
+              <li><a href="#Car"><i class="alert alert-success"></i><span>Car</span></a>
               </li>
-              <li><a href="#generate"><i class="alert alert-info"></i><span>generate</span></a>
+              <li><a href="#accelerate"><i class="alert alert-info"></i><span>accelerate</span></a>
               </li>
-              <li><a href="#fn"><i class="alert alert-info"></i><span>fn</span></a>
+              <li><a href="#honk"><i class="alert alert-info"></i><span>honk</span></a>
               </li>
             </ul>
           </div>
         </div>
         <div class="span9">
-          <section id="Doxx">
-            <h1>Doxx</h1>
+          <section id="Car">
+            <h1>Car</h1>
             <h5 class="subheader"></h5>
             <p>
-              <div class="label label-success radius ctx-type">class</div><span>&nbsp;</span><span>new Doxx()</span><span>&nbsp;</span><span>&nbsp;</span><span class="label label-default">extends</span><span>&nbsp;</span><span>Compiler</span>
+              <div class="label label-success radius ctx-type">class</div><span>&nbsp;</span><span>new Car()</span><span>&nbsp;</span><span>&nbsp;</span><span class="label label-default">extends</span><span>&nbsp;</span><span>Vehicle</span>
             </p>
           </section>
           <div class="description"></div>
-          <pre><code class="language-javascript">class Doxx extends Compiler {
-	constructor(){
-
+          <pre><code class="language-javascript">class Car extends Vehicle {
+	constructor(make){
+			super(make);
 	}</code></pre>
-          <section id="generate">
-            <h1>generate</h1>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">var honda = new Car("Honda");</code></pre>
+          <section id="accelerate">
+            <h1>accelerate</h1>
             <h5 class="subheader"></h5>
             <p>
-              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Doxx.prototype.generate()</span><span>&nbsp;</span>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Car.prototype.accelerate()</span><span>&nbsp;</span>
             </p>
           </section>
           <div class="description"><p>Generates the files</p></div>
-          <pre><code class="language-javascript">generate (){
+          <pre><code class="language-javascript">accelerate (){
 
 }</code></pre>
-          <section id="fn">
-            <h1>fn</h1>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">honda.accelerate();</code></pre>
+          <section id="honk">
+            <h1>honk</h1>
             <h5 class="subheader"></h5>
             <p>
-              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Doxx.prototype.fn()</span><span>&nbsp;</span>
+              <div class="label label-info radius ctx-type">method</div><span>&nbsp;</span><span>Car.prototype.honk()</span><span>&nbsp;</span>
             </p>
           </section>
           <div class="description"><p>Some other function</p></div>
-          <pre><code class="language-javascript">fn () {
+          <pre><code class="language-javascript">honk () {
 
 }
 }</code></pre>
+          <h3 class="muted">Example</h3>
+          <pre><code class="language-javascript">honda.honk();</code></pre>
         </div>
       </div>
     </div>
