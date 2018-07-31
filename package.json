@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "gulp": "^3.9.0",
-    "mr-doc": "git+https://github.com/mr-doc/mr-doc.git"
+    "mr-doc": "^3.2.1"
   },
   "devDependencies": {
     "glob": "^5.0.14",
